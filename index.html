@@ -17,6 +17,9 @@
 <link rel="stylesheet" type="text/css" href="asset/css/reset.css">
 <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
 <link href="asset/css/style.css" rel="stylesheet" type="text/css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -28,23 +31,25 @@
 					<p class="p-header__subtitle">彩り、おいしさ、優しさで、元気な⽣活を。</p>
 					<h2 class="p-header__maintitle">Colorlthyのおためしセットキャンペーン</h2>
 				</div>
-				<div class="p-header__set">
-					<div class="p-header__set--base">
-						<p class="p-header__set--base__tit">お得な基本セット</p>
-						<p class="p-header__set--base__price">1,620<span class="p-header__set--base__unit">円</span></p>
+				<div class="p-header__group">
+					<div class="p-header__set top-to-down">
+						<div class="p-header__set--base">
+							<p class="p-header__set--base__tit">お得な基本セット</p>
+							<p class="p-header__set--base__price">1,620<span class="p-header__set--base__unit">円</span></p>
+						</div>
+						<picture class="p-header__set--plus">
+							<img src="asset/images/plus.png" alt=""/>
+						</picture>
+						<div class="p-header__set--limit">
+							<p class="p-header__set--limit__subtit">旬のおすすめ⾷材</p>
+							<p class="p-header__set--limit__tit">3品プレゼント</p>
+							<a href="#" class="p-header__set--limit__link">今⽉のおすすめはこちら</a>
+						</div>
 					</div>
-					<picture class="p-header__set--plus">
-						<img src="asset/images/plus.png" alt=""/>
+					<picture class="p-header__vegetables">
+						<img src="asset/images/vegetables.png" alt="Colorlthyのおためしセット"/>
 					</picture>
-					<div class="p-header__set--limit">
-		  				<p class="p-header__set--limit__subtit">旬のおすすめ⾷材</p>
-						<p class="p-header__set--limit__tit">3品プレゼント</p>
-						<a href="#" class="p-header__set--limit__link">今⽉のおすすめはこちら</a>
-					</div>
 				</div>
-				<picture class="p-header__vegetables">
-					<img src="asset/images/vegetables.png" alt="Colorlthyのおためしセット"/>
-				</picture>
 				<button class="p-button">おためしセットを注⽂する</button>
 			</div>
 		</div>
@@ -57,14 +62,16 @@
 	<main>
 		<div class="p-about p-inner__in">
 			<h2 class="p-about__tit p-title">Colorlthyって？</h2>
-			<picture class="p-about__graph">
-		    	<img src="asset/images/graph_pc.png" class="p-about__graph--pc" alt="お客さま満足度"/>
-		    	<img src="asset/images/graph_sp.png" class="p-about__graph--sp" alt="お客さま満足度"/>
-			</picture>
-			<div class="p-about__explanation">
-			  <h3 class="p-about__subtit">彩り、おいしさ、優しさで、元気な⽣活を。</h3>
-			  <p class="p-about__txt">Colorlthy（カラルシー）は、彩りよく、おいしくて、体に優しい⾷事で元気に過ごしたい⽅を応援する、定期宅配サービスです。できる限り農薬を使わず安⼼して⾷べられ、素材本来のおいしさを楽しめる、新鮮な⾷材をお届けします。</p>
-			  <p class="p-about__txt">⾷材へのこだわりをお伝えしてお客様のご希望に合う⾷材を選んでいただき、お受け取りまでスムーズに⾏っていただけるよう、⽇々努⼒してまいります。</p>
+			<div class="p-about__group">
+				<picture class="p-about__graph">
+					<img src="asset/images/graph_pc.png" class="p-about__graph--pc" alt="お客さま満足度"/>
+					<img src="asset/images/graph_sp.png" class="p-about__graph--sp" alt="お客さま満足度"/>
+				</picture>
+				<div class="p-about__explanation">
+					<h3 class="p-about__subtit">彩り、おいしさ、優しさで、元気な⽣活を。</h3>
+					<p class="p-about__txt">Colorlthy（カラルシー）は、彩りよく、おいしくて、体に優しい⾷事で元気に過ごしたい⽅を応援する、定期宅配サービスです。できる限り農薬を使わず安⼼して⾷べられ、素材本来のおいしさを楽しめる、新鮮な⾷材をお届けします。</p>
+					<p class="p-about__txt">⾷材へのこだわりをお伝えしてお客様のご希望に合う⾷材を選んでいただき、お受け取りまでスムーズに⾏っていただけるよう、⽇々努⼒してまいります。</p>
+				</div>
 			</div>
 		</div>
 		
@@ -108,10 +115,10 @@
 				  </ul>
 			</div>
 
-			<div class="p-trialset">
+			<div class="p-trialset p-inner__in">
 				<h2 class="p-title">全10品の⾷材をお届けします</h2>
 				<p class="p-title__sub">Colorlthyのおためしセットの⾷材はこちら（プレゼント含む）。</p>
-				<ul class="p-trialset__list p-inner__in">
+				<ul class="p-trialset__list">
 					<li class="p-trialset__item">
 						<picture><img src="asset/images/set01.jpg" alt="たけのこ" class="p-trialset__item__img"/></picture>
 						<p class="p-trialset__item__tit">たけのこ</p>
@@ -171,7 +178,8 @@
 			<h2 class="p-title">お客様の声</h2>
 			<p class="p-customer__text">Colorlthyをご利⽤のお客様から、嬉しい声をいただいています。</p>
 		  	<div class="p-customer__list">
-				<div class="p-customer__box">
+				<div class="p-customer__box left-to-right">
+					<img src="asset/images/customer01.jpg" alt="のりさんの声"/> 
 					<div class="p-customer__item">
 						<div class="p-customer__item__top">
 							<p class="p-customer__item__top__tit">安⼼の⾷材</p>
@@ -179,9 +187,9 @@
 						</div>
 						<p class="p-customer__txt">⼦どもが健康的に育つよう、⾷事には気をつけたいと⽇々思っています。<br>Colorlthyは、作り⽅にこだわった、国産の安全な⾷材が揃っているので、いつも安⼼して選ぶことができています。</p>
 					</div>
-					<img src="asset/images/customer01.jpg" alt="のりさんの声"/> 
 				</div>
-				<div class="p-customer__box p-customer__box--mirror">
+				<div class="p-customer__box p-customer__box--mirror right-to-left">
+					<img src="asset/images/customer02.jpg" alt="Minamiさんの声"/> 
 					<div class="p-customer__item--mirror">
 						<div class="p-customer__item__top">
 							<p class="p-customer__item__top__tit">料理のバリエーションが広がった</p>
@@ -189,9 +197,9 @@
 						</div>
 						<p class="p-customer__txt">スーパーで⾷材を購⼊していると偏りがちでしたが、Colorlthyのカタログでは⾷材⼀つ⼀つのこだわりを知ることができ、興味が広がります。⾊々な⾷材に挑戦して料理のバリエーションが広がり、料理が楽しくなりました！</p>
 					</div>
-					<img src="asset/images/customer02.jpg" alt="Minamiさんの声"/> 
 				</div>
-				<div class="p-customer__box">
+				<div class="p-customer__box left-to-right">
+					<img src="asset/images/customer03.jpg" alt="ゆうこさんの声"/> 
 					<div class="p-customer__item">
 						<div class="p-customer__item__top">
 							<p class="p-customer__item__top__tit">フルーツがおいしい！</p>
@@ -199,7 +207,6 @@
 						</div>
 						<p class="p-customer__txt">家族揃ってフルーツが⼤好きです。Colorlthyのフルーツは、いつもみずみずしくて絶妙な⽢さで最⾼です。みんなでテーブルを囲んでわいわいして、家族のだんらんの時間が温かいものになっています。</p>
 					</div>
-					<img src="asset/images/customer03.jpg" alt="ゆうこさんの声"/> 
 				</div>
 			</div>
 		</div>
@@ -207,12 +214,17 @@
 		<div class="p-order">
 			<div class="p-order__inner">
 				<h3 class="p-order__inner__tit">3品プレゼント付き！<br>Colorlthyのおためしセット</h3>
-				<img src="asset/images/day.png" alt="6月5日まで" class="p-order__inner__limit"/>
+				<picture class="p-order__inner__limit">
+					<img src="asset/images/day.png" alt="6月5日まで"/>
+				</picture>
 				<div  class="p-order__inner__set">
-					<img src="asset/images/vegetables.png" alt="おためしセット" class="p-order__inner__set__img"/>
 					<p class="p-order__inner__set__price">1,620
 						<span class="p-order__inner__set__price__yen">円</span>
 					</p>
+					<picture class="p-order__inner__set__img">
+						<img src="asset/images/vegetables.png" alt="おためしセット"/>
+					</picture>
+
 				</div>
 				<button class="p-button p-order__inner__button">おためしセットを注⽂する</button>
 			</div>
@@ -232,5 +244,7 @@
 			<small class="p-footer__copyright">Copyright @ Colorlthy inc.</small>
 		</div>
 	</footer>
+
+	<script type="text/javascript" src="./asset/js/fadeIn.js"></script>
 </body>
 </html>

@@ -46,7 +46,6 @@ p{
 	width: 100%;
 	max-width: 730px;
 	margin: 0 auto;
-	position: relative;
 }
 
 .p-header{
@@ -77,17 +76,6 @@ p{
 	margin-bottom: 30px;
 }
 
-.p-header__title::after{
-	content: "";
-	background-image: url("../images/day.png");
-	background-size: cover;
-	position: absolute;
-	right: 30px;
-	top:30px;
-	width: 150px;
-	height: 150px;
-}
-
 .p-header__subtitle{
 	font-size: 16px;
 	font-weight: 500;
@@ -103,6 +91,12 @@ p{
 	display: inline-block;
 }
 
+.p-header__group{
+	display: flex;
+	justify-content: space-between;
+}
+
+
 .p-header__set{
 	padding: 0 30px;
 	margin-bottom: 50px;
@@ -116,30 +110,26 @@ p{
 	z-index: 100;
 }
 
-.p-header__set--base{
-	
-}
-
 .p-header__set--base__tit{
 	font-size: 30px;
 }
 
 .p-header__set--base__price{
 	font-size: 60px;
-	display: inline-block;
+	display: flex;
 }
 
 .p-header__set--base__unit{
 	font-size: 28px;
 	margin-left: 8px;
-	position: relative;
+	display: block;
+	width: 28px;
 }
 
 .p-header__set--base__unit::before{
 	content: "(税込)";
 	font-size: 10px;
-    position: absolute;
-    bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .p-header__set--plus{
@@ -150,9 +140,6 @@ p{
 	max-width: 30px;
 }
 
-
-.p-header__set--limit{
-}
 
 .p-header__set--limit__subtit{
 	font-size: 30px;
@@ -170,10 +157,7 @@ p{
 }
 
 .p-header__vegetables{
-	position: absolute;
 	max-width: 50%;
-	right: 0;
-	bottom: 70px;
 }
 
 
@@ -181,15 +165,14 @@ p{
 
 
 .p-about{
-	position: relative;
 	padding: 70px 0 70px;
 	height: auto;
 }
-
+.p-about__group{
+	display: flex;
+	justify-content: space-between;
+}
 .p-about__graph{
-	position: absolute;
-	right: 0;
-	top: 80px;
 	height: auto;
 }
 .p-about__graph img{
@@ -231,7 +214,6 @@ p{
 	text-align: center;
 	padding: 90px 0;
 }
-.p-campaign{}
 
 .p-campaign__text{
 	line-height: 24px;
@@ -294,9 +276,6 @@ p{
 	flex-wrap: wrap;
 }
 
-.p-trialset__list{
-	
-}
 
 .p-trialset__item{
 	width: 20%;
@@ -419,10 +398,9 @@ p{
 	max-width: 800px;
 	margin: 0 auto;
 	padding: 60px 50px;
-	position: relative;
 	box-sizing: border-box;
 	height: auto;
-	height: 600px;
+	position: relative;
 }
 /*
 .p-order__inner::after{
@@ -437,55 +415,49 @@ p{
 }
 
 .p-order__inner__set__price{
-	font-size: 40px;
-	margin-top: 32px;
-	font-weight: 900;
+	font-size: 60px;
 	display: flex;
 	font-weight: bold;
-	position: absolute;
- 	top: 80%;
- 	left: 65%;
- 	transform: translateY(-50%) translateX(-50%);
- 	-webkit- transform: translateY(-50%) translateX(-50%);
 }
 
 .p-order__inner__set__price__yen::before{
-	content: '（税込）';
-	width: auto;
-	font-size: 16px;
-	height: auto;
+	content: '(税込)';
+	font-size: 10px;
+	margin-bottom: 30px;
 }
 
-.p-order__inner__price__yen{
-	font-size: 24px;
-	display: flex;
-	flex-direction: column;
-	align-items: center; 
+.p-order__inner__set__price__yen{
+	
+
+	font-size: 28px;
+    margin-left: 8px;
+    display: block;
+    width: 28px;
 }
 .p-order__inner__limit{
-	max-width: 150px;
 	position: absolute;
-	top: 30px;
-	right: 40px;
+	right: 50px;
+	top: 40px;
+	width: 100%;
+	display: block;
+	text-align: right;
+}
+.p-order__inner__limit img{
+	max-width: 150px;
 }
 
 .p-order__inner__set{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+.p-order__inner__set img{
 	max-width: 350px;
- 	position: absolute;
- 	top: 50%;
- 	left: 50%;
- 	transform: translateY(-50%) translateX(-50%);
- 	-webkit- transform: translateY(-50%) translateX(-50%);
 }
 
 .p-order__inner__button{
-	max-width: 350px;
+	margin-top: 30px;
 	display: block;
-	position: absolute;
-	bottom: 50px;
- 	left: 50%;
- 	transform: translateX(-50%);
- 	-webkit- transform: translateX(-50%);
 }
 
 
@@ -498,9 +470,7 @@ p{
 }
 
 .p-footer__links{
-	
 	display: inline-block;
-	float: left;
 }
 
 .p-footer__link{
@@ -512,5 +482,182 @@ p{
 .p-footer__copyright{
 	color: #ffffff;
 	display: inline-block;
-	float: right;
+}
+
+
+
+
+/*フェードインアニメ*/
+/*左から右にフェードイン*/
+.left-to-right {
+	opacity: 0.1;
+	transform: translateX(-20px);
+	transition: all 1s;
+  }
+  .left-to-right.scrollin {
+	opacity: 1;
+	transform: translate(0);
+  }
+
+  .right-to-left {
+	opacity: 0.1;
+	transform: translateX(20px);
+	transition: all 1s;
+  }
+  .right-to-left.scrollin {
+	opacity: 1;
+	transform: translate(0);
+  }
+  
+  /*下から上にフェードイン*/
+  .top-to-down {
+	opacity: 0.1;
+	transform: translateY(-20px);
+	transition: all 1s;
+  }
+  .top-to-down.scrollin {
+	opacity: 1;
+	transform: translateY(0);
+  }
+
+
+
+
+
+@media screen and (max-width: 740px){ 
+	.p-header{
+		padding: 0;
+	}
+	.p-header__white{
+		padding: 0 0 5% 0;
+	}
+	.p-logo{
+		margin: 0 auto 30px;
+	}
+	.p-header__title{
+		display: flex;
+		flex-direction:column;
+		align-items: center;
+	}
+	.p-header__group{
+		justify-content: center;
+		flex-direction:column-reverse;
+		align-items: center;
+	}
+	.p-header__set{
+		padding: 0;
+		margin-bottom: 30px;
+	}
+	.p-header__vegetables{
+		max-width: 100%;
+		margin-bottom: 30px;
+	}
+
+
+
+
+	.p-inner__in{
+		padding: 5%;
+	}
+	.p-about__group{
+		justify-content: center;
+		flex-direction:column;
+		align-items: center;
+	}
+	.p-about__graph{
+		margin-bottom: 30px;
+	}
+	.p-campaign__text br{
+		display: none;
+	}
+
+	.p-campaign__list{
+		justify-content: center;
+		flex-direction:column;
+		align-items: center;
+		gap: 30px 0;
+	}
+
+	.p-campaign__item__img{
+		max-width: 220px;
+	}
+
+
+	.p-trialset{
+		padding: 5%;
+	}
+	.p-trialset__item{
+		width: 48%;
+		max-width: none;
+	}
+	.p-trialset__item__img{
+		max-width: 100%;
+	}
+
+
+
+
+
+	.p-customer__item{
+		position: relative;
+		bottom: 0;
+		left: 0;
+		max-width: none;
+	}
+	.p-customer__item--mirror{
+		position: relative;
+		bottom: 0;
+		right: 0;
+		max-width: none;
+	}
+	.p-customer__box{
+		margin-bottom: 5vw;
+	}
+	.p-customer__box img{
+		max-width: none;
+	}
+
+
+	.p-order{
+		padding: 0;
+	}
+	.p-order__inner{
+		padding: 5% 5% 10% 5%;
+	}
+
+	.p-order__inner__tit{
+		font-size: 30px;
+	}
+	.p-order__inner__tit br{
+		display: none;
+	}
+
+	.p-order__inner__limit{
+		top: 100px;
+		right: 5vw;
+	}
+
+	.p-order__inner__limit img{
+		width: 30vw;
+	}
+
+	.p-order__inner__set{
+		justify-content: center;
+		flex-direction:column;
+		align-items: normal;
+		margin-top: 30px;
+	}
+
+	.p-order__inner__set__price{
+		font-size: 40px;
+	}
+
+	.p-order__inner__set__price__yen{
+		font-size: 20px;
+		line-height: 1;
+	}
+
+	.p-order__inner__set__img{
+		text-align: center;
+	}
 }
